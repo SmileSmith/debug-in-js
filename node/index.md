@@ -25,3 +25,23 @@
 可以在代码编辑器的右侧鼠标点击切换或快捷键（F9）
 
 ![断点](./../_images/node/5.png)
+
+## 实战，调试wxapp下的gulpfile.js
+
+修改项目中launch.json，注意`program`和`cwd`
+
+```javascript
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "cwd":"${workspaceRoot}",
+            "sourceMaps": true,
+
+        }
+    ]
+```
+
+![调试gulpfile](./../_images/node/6.png)
